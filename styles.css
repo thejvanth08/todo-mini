@@ -1,5 +1,108 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+
 :root {
-  --primary-color: #068d9d;
-  --secondary-color: #80ded9;
-  --tertiary-color: #aeecef;
+  --primary-color: #bdd5ea;
+  --secondary-color: #f7f7ff;
+  --tertiary-color: #577399;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-color);
+  width: 100%;
+}
+
+/* to hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* just container */
+.main {
+  width: 100%;
+  height: auto;
+  padding-block: 4rem;
+}
+
+/* this is visible */
+.todo {
+  /* background-color: white; */
+  width: 80vw;
+  max-width: 600px;
+  height: 400px;
+  margin-inline: auto;
+}
+
+.heading {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding-block: 0.8rem;
+}
+
+.tasks {
+  background-color: var(--secondary-color);
+  min-height: 100%;
+  margin-top: 1.2rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 8px rgba(128, 128, 128, 0.5),
+    -2px -2px 8px rgba(128, 128, 128, 0.5);
+}
+
+.task p {
+  color: var(--tertiary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  padding-block: 0.4rem;
+  transition: letter-spacing 0.3s;
+}
+
+.task p:hover {
+  letter-spacing: 2px;
+}
+
+.btn {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  padding-bottom: 4rem;
+}
+
+.input-container input {
+  width: 70%;
+  height: 40px;
+  padding-inline: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input-container .btn {
+  display: inline-block;
+  width: 28%;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* strike out - finished task
+   use specificity correctly */
+p.strike {
+  color: grey;
+  font-weight: 500;
+  text-decoration-line: line-through;
 }
